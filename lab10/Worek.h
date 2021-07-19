@@ -8,6 +8,7 @@ class Worek
     Prezent * _head=nullptr;
   public:
     Worek()=default;
+    Worek(const Worek &v);
     ~Worek()=default;
     //Worek(const Worek& v);
     void Wloz(Prezent pr);
