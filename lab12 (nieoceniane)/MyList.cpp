@@ -36,9 +36,9 @@ MyList::MyList(const MyList& other): MyList()
   }
 }
 MyList::MyList(MyList&& other)
-: head(std::__exchange(other.head, nullptr))
+: rozmiar(std::__exchange(other.rozmiar, 0))
+, head(std::__exchange(other.head, nullptr))
 , tail(std::__exchange(other.tail, nullptr))
-, rozmiar(std::__exchange(other.rozmiar, 0))
 {
   std::cout<<"KONST: przenoszacy"<<std::endl;
 }
